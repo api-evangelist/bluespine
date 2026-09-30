@@ -1,23 +1,64 @@
 aid: bluespine
+
 name: Bluespine
-description: 'Bluespine is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://cdn.prod.website-files.com/65f956e060d658e1a054f39d/6624e107774554a954841817_Open%20Graph.webp
+
+description: 'Bluespine is an AI‑driven platform that helps self‑insured employers and health‑plan sponsors reduce medical claims overbilling, monitor plan performance, and meet fiduciary duties under ERISA. Founded in 2023 and based in New York, the company leverages machine‑readable price transparency files, carrier billing guidelines, and proprietary data sources to detect policy violations and recover savings for plan participants.'
+
 url: https://raw.githubusercontent.com/api-evangelist/bluespine/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-29 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-29'
+
 modified: '2026-09-29'
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: The site provides no developer documentation or API reference.
+  evidence:
+    - url: https://www.bluespine.io/
+      status: 200
+  checked: '2026-09-29'
+
 tags:
 - Company
-apis: []
+- Healthcare
+- AI
+- Claims
+- Fiduciary
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/bluespine-hosts.yml
+- type: Vendors
+  url: vendors/bluespine-vendors.yml
+- type: DomainSecurity
+  url: security/bluespine-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.bluespine.io/
+- type: PrivacyPolicy
+  url: https://www.bluespine.io/privacy-policy
+
+apis: []
+x-enrichment:
+  date: '2026-09-29'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
